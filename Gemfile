@@ -16,17 +16,6 @@ group :development, :test do
 end
 
 # Adicionadas
-
-gem "awesome_print", require:"ap"
-gem 'sass-rails', '~> 5.0'
-gem 'bootstrap-datepicker-rails', '~> 1.6.1.1'
-gem 'bootstrap-sass', '~> 3.3.6'
-gem 'twitter-bootstrap-rails', '~> 3.2.2'
-gem 'jquery-ui-rails', '~> 5.0.5'
-gem 'execjs', '~> 2.7.0'
-
-
-
 gem 'devise', '~> 4.2'
 gem 'activeadmin', github: 'activeadmin'
 gem 'active_skin'
@@ -37,3 +26,13 @@ gem 'kaminari'
 gem 'will_paginate'
 gem 'carrierwave', '~> 1.0'
 gem 'fog'
+gem 'rails_12factor'
+
+
+gem "awesome_print", require:"ap"
+gem 'sass-rails', '~> 5.0'
+gem 'bootstrap-datepicker-rails', '~> 1.6.1.1'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'twitter-bootstrap-rails', '~> 3.2.2'
+gem 'jquery-ui-rails', '~> 5.0.5'
+gem 'execjs', '~> 2.7.0'
