@@ -1,0 +1,34 @@
+<ul class="nav nav-pills">
+  <li role="presentation" class="active"><%= link_to 'Pagina Inicial', root_path %></li>
+  <li role="presentation" class="active"><%= link_to 'Cadastrar Letra de Música', new_admin_letra_path, target: '_blank' %></li>
+  <!-- <li role="presentation" class="active"><%#= link_to 'Louvor Reuniões', new_reuniaoletra_path %></li> -->
+</ul>
+
+<h2>Localizar</h2>
+<%= form_tag letras_path, method: :get do %>
+  <%= text_field_tag :localizar, params[:localizar]%>
+  <%= submit_tag 'Buscar' %>
+<% end %>
+
+<h2>Letras das Músicas</h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Cantor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @letras.each do |letra| %>
+      <tr>
+        <td><%= letra.nome %></td>
+        <td><%= letra.cantor %></td>
+        <td><%= link_to 'Visualizar', letra.arquivo_url, target: '_blank' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate @letras, :previous_label => 'Anterior', :next_label => 'Próximo', class: "pager" %>

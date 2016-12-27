@@ -1,0 +1,22 @@
+default: &default
+  adapter: <%= ENV['PG_ADAPTER_PROJETOR'] %>
+  host: <%= ENV['PG_HOST_PROJETOR'] %>
+  port: <%= ENV['PG_PORT_PROJETOR'] %>
+  username: <%= ENV['PG_USERNAME_PROJETOR'] %>
+  password: <%= ENV['PG_PASSWORD_PROJETOR'] %>
+
+producao:
+  <<: *default
+  database: <%= ENV['PG_DATABASE_PRODUCAO_PROJETOR'] %>
+
+cloud:
+  <<: *default
+  database: <%= ENV['PG_DATABASE_CLOUD_PROJETOR'] %>
+
+development:
+  <<: *default
+  database: <%= ENV['PG_DATABASE_DEVELOPMENT_PROJETOR'] %>
+
+test:
+  <<: *default
+  database: <%= ENV['PG_DATABASE_TEST_PROJETOR'] %>
