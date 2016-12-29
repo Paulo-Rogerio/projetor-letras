@@ -11,7 +11,8 @@ producao:
 
 cloud:
   <<: *default
-  database: <%= ENV['PG_DATABASE_CLOUD_PROJETOR'] %>
+  #database: <%= ENV['PG_DATABASE_CLOUD_PROJETOR'] %>
+  database: <%= ENV['PG_DATABASE_DEVELOPMENT_PROJETOR'] %>
 
 development:
   <<: *default

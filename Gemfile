@@ -18,7 +18,6 @@ end
 
 # Adicionadas
 gem 'devise', '~> 4.2'
-# gem 'activeadmin', github: 'activeadmin'
 gem 'activeadmin', :git => 'https://github.com/activeadmin/activeadmin.git'
 gem 'active_skin'
 gem 'passenger', '~> 5.0.29'
