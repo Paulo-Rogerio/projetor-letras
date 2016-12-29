@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby ENV['CUSTOM_RUBY_VERSION']
 gem 'rails', '4.2.4'
 gem 'pg'
 gem 'uglifier', '>= 1.3.0'
