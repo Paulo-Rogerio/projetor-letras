@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reuniaoletra_id: 
+  letra_id: 
+
+two:
+  reuniaoletra_id: 
+  letra_id: 

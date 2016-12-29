@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161227131002) do
+ActiveRecord::Schema.define(version: 20161228184104) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,4 +58,23 @@ ActiveRecord::Schema.define(version: 20161227131002) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "letras_reunioesletras", force: :cascade do |t|
+    t.integer  "reuniaoletra_id"
+    t.integer  "letra_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "letras_reunioesletras", ["letra_id"], name: "index_letras_reunioesletras_on_letra_id", using: :btree
+  add_index "letras_reunioesletras", ["reuniaoletra_id"], name: "index_letras_reunioesletras_on_reuniaoletra_id", using: :btree
+
+  create_table "reunioesletras", force: :cascade do |t|
+    t.text     "nome"
+    t.date     "data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "letras_reunioesletras", "letras"
+  add_foreign_key "letras_reunioesletras", "reunioesletras"
 end

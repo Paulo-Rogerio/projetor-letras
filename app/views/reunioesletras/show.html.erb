@@ -1,0 +1,24 @@
+<h2>Músicas - Reunião <%= @reuniaoletra.data %></h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Cantor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @letras.each do |letra| %>
+      <tr>
+        <td><%= letra.nome %></td>
+        <td><%= letra.cantor %></td>
+        <td><%= link_to 'Visualizar', letra.arquivo_url, target: '_blank' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<ul class="nav nav-pills">
+  <li role="presentation" class="active"><%= link_to 'Voltar', reunioesletras_path %></li> 
+</ul>

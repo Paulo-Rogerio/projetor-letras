@@ -1,0 +1,1 @@
+json.array! @reunioesletras, partial: 'reunioesletras/reuniaoletra', as: :reuniaoletra

@@ -1,0 +1,6 @@
+<li class="control-group nested-fields">
+ <div class="controls">
+   <%= f.select :letra_id, Letra.all.map { |u| [u.nome_da_musica_e_cantor, u.id] }, { include_blank: true } %>
+   <%= link_to_remove_association "Remover", f %>
+ </div>
+</li>
