@@ -9,10 +9,8 @@ Rails.application.routes.draw do
   get 'creatives/index'
   root "creatives#index"
 
-  # scope "letras/reunioes" do
-  # 		 resources :reunioesletras, :path => "louvores"
-  # end
-
-  resources :reunioesletras
+  scope "letras/reunioes" do
+  		 resources :reunioesletras, :path => "louvores"
+  end
 
 end
