@@ -28,6 +28,9 @@ gem 'will_paginate'
 gem 'carrierwave', '~> 1.0'
 gem 'fog'
 gem 'rails_12factor'
+gem 'prawn', '~> 2.1.0'
+gem 'prawnto', '~> 0.1.1'
+gem 'prawn-table', '~> 0.2.2'
 
 
 gem "awesome_print", require:"ap"
@@ -37,3 +40,6 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'twitter-bootstrap-rails', '~> 3.2.2'
 gem 'jquery-ui-rails', '~> 5.0.5'
 gem 'execjs', '~> 2.7.0'
+
+
+

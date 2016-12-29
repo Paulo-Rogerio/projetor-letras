@@ -7,7 +7,7 @@ class LetrasController < ApplicationController
         conditions << "cantor ILIKE '%#{params[:localizar]}%'"
         conditions << "letra ILIKE '%#{params[:localizar]}%'"
       end
-      @letras =  Letra.where("#{conditions.any? ? "#{conditions.join(' OR ')}" : ''}").paginate(:page => params[:page], :per_page => 5).order(nome: :asc)
+      @letras =  Letra.where("#{conditions.any? ? "#{conditions.join(' OR ')}" : ''}").paginate(:page => params[:page], :per_page => 7).order(nome: :asc)
   end
 
   def show

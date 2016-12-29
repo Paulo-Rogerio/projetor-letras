@@ -4,7 +4,7 @@ class ReunioesletrasController < ApplicationController
   # GET /reunioesletras
   # GET /reunioesletras.json
   def index
-    @reunioesletras = Reuniaoletra.all
+    @reunioesletras = Reuniaoletra.all.paginate(:page => params[:page], :per_page => 7).order(created_at: :desc)
   end
 
   # GET /reunioesletras/1

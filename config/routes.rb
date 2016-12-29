@@ -6,11 +6,17 @@ Rails.application.routes.draw do
   get '/letras(.:format)', to: 'letras#index', as: 'letras'
   get '/letras/:id(.:format)', to: 'letras#show', as: 'letra'
 
+  scope "letras/reunioes" do
+       resources :reunioesletras, :path => "louvores"
+  end
+
+  resources :recados do
+      member do
+          get :imprimir
+      end
+  end
+
   get 'creatives/index'
   root "creatives#index"
-
-  scope "letras/reunioes" do
-  		 resources :reunioesletras, :path => "louvores"
-  end
 
 end

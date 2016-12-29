@@ -24,4 +24,7 @@
            inflect.plural 'reuniaoletra', 'reunioesletras'
            inflect.irregular 'letra_reuniaoletra', 'letras_reunioesletras'
            inflect.plural 'letra_reuniaoletra', 'letras_reunioesletras'
+           inflect.irregular 'recado', 'recados'
+           inflect.plural 'recado', 'recados'
+
 end

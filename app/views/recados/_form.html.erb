@@ -1,0 +1,25 @@
+<%= form_for(@recado) do |f| %>
+  <% if @recado.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recado.errors.count, "error") %> prohibited this recado from being saved:</h2>
+
+      <ul>
+      <% @recado.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :interessado%><br>
+    <%= f.text_field :interessado, placeholder: 'Ex Pessoas: Sr. josé | Ex Carros: NNN 3131'  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :recado %><br>
+    <%= f.text_area :recado, placeholder: 'Ex Pessoas: Sua esposa lhe aguarda na mesa de som. | Ex Carros: Carro estacionado em local proibido. Guincho já foi acionado para remoção do veículo.' %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
