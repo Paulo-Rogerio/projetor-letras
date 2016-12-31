@@ -29,5 +29,14 @@ ActiveAdmin.register_page "Dashboard" do
     #     end
     #   end
     # end
+
+    columns do
+      column do
+        panel "Informações" do
+          para "Bem vindo a parte administrativa do sistema Letras Projetor."
+        end
+      end
+    end
+
   end # content
 end

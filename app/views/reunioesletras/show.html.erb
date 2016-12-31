@@ -13,7 +13,7 @@
       <tr>
         <td><%= letra.nome %></td>
         <td><%= letra.cantor %></td>
-        <td><%= link_to 'Visualizar', letra.arquivo_url, target: '_blank' %></td>
+        <td><%= link_to 'Visualizar', letra.arquivo_url, disposition: 'inline', target: '_blank' %></td>
       </tr>
     <% end %>
   </tbody>

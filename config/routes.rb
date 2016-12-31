@@ -16,6 +16,8 @@ Rails.application.routes.draw do
       end
   end
 
+  resources :videos, :path => "videira-news"
+
   get 'creatives/index'
   root "creatives#index"
 

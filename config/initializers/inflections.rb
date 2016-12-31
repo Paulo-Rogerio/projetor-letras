@@ -26,5 +26,6 @@
            inflect.plural 'letra_reuniaoletra', 'letras_reunioesletras'
            inflect.irregular 'recado', 'recados'
            inflect.plural 'recado', 'recados'
-
+           inflect.irregular 'video', 'videos'
+           inflect.plural 'video', 'videos'
 end

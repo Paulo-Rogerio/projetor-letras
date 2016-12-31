@@ -13,7 +13,7 @@
       <tr>
         <td><%= @recado.interessado %></td>
         <td><%= @recado.recado %></td>
-  		<td><%= link_to 'Projetar', imprimir_recado_path(:id => @recado.id, :interessado => @recado.interessado, :recado => @recado.recado) , target: '_blank' %></td>
+  		<td><%= link_to 'Projetar', imprimir_recado_path(:id => @recado.id, :interessado => @recado.interessado, :recado => @recado.recado), disposition: 'inline', target: '_blank' %></td>
   </tbody>
 </table>
 
