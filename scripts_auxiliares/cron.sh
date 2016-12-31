@@ -8,8 +8,8 @@ fi
 
 dia=$(date +%w)
 
-# Executar todos sabado
+# Executar todo sabado
 if [[ ${dia} -eq 6 ]]
 then
-  RAILS_ENV=development rake videos:clean
+  RAILS_ENV=production rake videos:clean
 fi
