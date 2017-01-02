@@ -1,0 +1,49 @@
+<%= form_for(@reuniao) do |f| %>
+  <% if @reuniao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reuniao.errors.count, "error") %> prohibited this reuniao from being saved:</h2>
+
+      <ul>
+      <% @reuniao.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :palavra %><br>
+    <%= f.text_field :palavra %>
+  </div>
+  <div class="field">
+    <%= f.label :preletor_id %><br>
+    <%= f.number_field :preletor_id %>
+  </div>
+  <div class="field">
+    <%= f.label :resumo %><br>
+    <%= f.text_area :resumo %>
+  </div>
+  <div class="field">
+    <%= f.label :dia_reuniao %><br>
+    <%= f.date_select :dia_reuniao %>
+  </div>
+  <div class="field">
+    <%= f.label :predio_id %><br>
+    <%= f.number_field :predio_id %>
+  </div>
+  <div class="field">
+    <%= f.label :arquivo %><br>
+    <%= f.text_field :arquivo %>
+  </div>
+  <div class="field">
+    <%= f.label :publico %><br>
+    <%= f.text_field :publico %>
+  </div>
+  <div class="field">
+    <%= f.label :tema_id %><br>
+    <%= f.number_field :tema_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

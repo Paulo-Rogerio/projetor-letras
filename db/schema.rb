@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161229210818) do
+ActiveRecord::Schema.define(version: 20161231224810) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,12 @@ ActiveRecord::Schema.define(version: 20161229210818) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
+  create_table "funcoes", force: :cascade do |t|
+    t.string   "funcao"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "letras", force: :cascade do |t|
     t.string   "nome"
     t.string   "cantor"
@@ -68,6 +74,20 @@ ActiveRecord::Schema.define(version: 20161229210818) do
   add_index "letras_reunioesletras", ["letra_id"], name: "index_letras_reunioesletras_on_letra_id", using: :btree
   add_index "letras_reunioesletras", ["reuniaoletra_id"], name: "index_letras_reunioesletras_on_reuniaoletra_id", using: :btree
 
+  create_table "predios", force: :cascade do |t|
+    t.string   "predio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "preletores", force: :cascade do |t|
+    t.string   "nome"
+    t.integer  "predio_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "funcao_id"
+  end
+
   create_table "recados", force: :cascade do |t|
     t.string   "interessado"
     t.text     "recado"
@@ -75,9 +95,28 @@ ActiveRecord::Schema.define(version: 20161229210818) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "reunioes", force: :cascade do |t|
+    t.string   "palavra"
+    t.integer  "preletor_id"
+    t.text     "resumo"
+    t.date     "dia_reuniao"
+    t.integer  "predio_id"
+    t.string   "arquivo"
+    t.string   "publico"
+    t.integer  "tema_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "reunioesletras", force: :cascade do |t|
     t.text     "nome"
     t.date     "data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "temas", force: :cascade do |t|
+    t.string   "tema"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

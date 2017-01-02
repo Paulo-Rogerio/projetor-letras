@@ -1,0 +1,45 @@
+<br>
+<ul class="nav nav-pills">
+  <li role="presentation" class="active"><%= link_to 'Pagina Inicial', root_path %></li>
+</ul>
+
+<h2>Localizar</h2>
+
+<%= form_tag reunioes_path, method: :get do %>
+    <%= text_field_tag :localizar, params[:localizar]%>
+    <%= submit_tag 'Buscar' %>
+<% end %>
+
+<h2>Listar Reuniões</h2>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Palavra</th>
+      <th>Preletor</th>
+      <th>Dia reunião</th>
+      <th>Prédio</th>
+      <th>Público</th>
+      <th>Tema</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+    <% @reunioes.each do |reuniao| %>
+      <tr>
+        <td><%= reuniao.palavra %></td>
+        <td><%= reuniao.preletor.nome %></td>
+        <td><%= reuniao.dia_reuniao %></td>
+        <td><%= reuniao.predio.predio %></td>
+        <td><%= reuniao.publico %></td>
+        <td><%= reuniao.tema.tema %></td>
+        <td><%= link_to 'Visualizar', reuniao.arquivo_url, target: '_blank', class: "btn btn-info" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate @reunioes, :previous_label => 'Anterior', :next_label => 'Próximo', class: "pager" %>
+

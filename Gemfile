@@ -32,6 +32,8 @@ gem 'prawn', '~> 2.1.0'
 gem 'prawnto', '~> 0.1.1'
 gem 'prawn-table', '~> 0.2.2'
 
+gem 'font-awesome-sass'
+
 
 gem "awesome_print", require:"ap"
 gem 'sass-rails', '~> 5.0'

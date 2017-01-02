@@ -18,6 +18,16 @@ Rails.application.routes.draw do
 
   resources :videos, :path => "videira-news"
 
+  get '/reunioes(.:format)', to: 'reunioes#index', as: 'reunioes'
+  get '/reunioes/:id(.:format)', to: 'reunioes#show', as: 'reuniao'
+
+  
+  # resources :temas
+  # resources :predios
+  # resources :preletores
+  # resources :funcoes
+  # resources :reunioes
+  
   get 'creatives/index'
   root "creatives#index"
 

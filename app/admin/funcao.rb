@@ -1,32 +1,25 @@
-ActiveAdmin.register Letra do
-menu parent: "Louvores"
+ActiveAdmin.register Funcao do
 
-  permit_params :nome, :cantor, :letra, :arquivo
+menu parent: "Palavras"
+
+  permit_params :funcao
 
     index do
       selectable_column
-      column :nome
-      column :cantor
-      column :arquivo
+      column :funcao
       column "Criado em", :created_at
       actions
     end
 
     show do |t|
       attributes_table do
-        row :nome
-        row :cantor
-        row :letra
-        row :arquivo
+        row :tema
       end
     end
 
     form :html => { :enctype => "multipart/form-data" } do |f|
       f.inputs do
-        f.input :nome
-        f.input :cantor
-        f.input :letra
-        f.input :arquivo
+        f.input :funcao
       end
       f.actions
    end
@@ -36,8 +29,8 @@ menu parent: "Louvores"
     def create
       super do |format|
           redirect_to(
-            admin_letras_path,
-            notice: 'Letra criada com sucesso.'
+            admin_funcoes_path,
+            notice: 'Função criada com sucesso.'
           ) and return
       end
     end
@@ -46,8 +39,8 @@ menu parent: "Louvores"
     def update
       super do |format|
           redirect_to(
-            admin_letras_path,
-            notice: 'Letra atualizada com sucesso.'
+            admin_funcoes_path,
+            notice: 'Função atualizada com sucesso.'
           ) and return
       end
     end
@@ -56,8 +49,8 @@ menu parent: "Louvores"
     def destroy
       super do |format|
         redirect_to(
-            admin_letras_path,
-            notice: 'Letra removida com sucesso.'
+            admin_funcoes_path,
+            notice: 'Função removida com sucesso.'
           ) and return
       end
     end

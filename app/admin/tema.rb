@@ -1,32 +1,24 @@
-ActiveAdmin.register Letra do
-menu parent: "Louvores"
+ActiveAdmin.register Tema do
 
-  permit_params :nome, :cantor, :letra, :arquivo
+menu parent: "Palavras"
+  permit_params :tema
 
     index do
       selectable_column
-      column :nome
-      column :cantor
-      column :arquivo
+      column :tema
       column "Criado em", :created_at
       actions
     end
 
     show do |t|
       attributes_table do
-        row :nome
-        row :cantor
-        row :letra
-        row :arquivo
+        row :tema
       end
     end
 
     form :html => { :enctype => "multipart/form-data" } do |f|
       f.inputs do
-        f.input :nome
-        f.input :cantor
-        f.input :letra
-        f.input :arquivo
+        f.input :tema
       end
       f.actions
    end
@@ -36,8 +28,8 @@ menu parent: "Louvores"
     def create
       super do |format|
           redirect_to(
-            admin_letras_path,
-            notice: 'Letra criada com sucesso.'
+            admin_temas_path,
+            notice: 'Tema criada com sucesso.'
           ) and return
       end
     end
@@ -46,8 +38,8 @@ menu parent: "Louvores"
     def update
       super do |format|
           redirect_to(
-            admin_letras_path,
-            notice: 'Letra atualizada com sucesso.'
+            admin_temas_path,
+            notice: 'Tema atualizado com sucesso.'
           ) and return
       end
     end
@@ -56,8 +48,8 @@ menu parent: "Louvores"
     def destroy
       super do |format|
         redirect_to(
-            admin_letras_path,
-            notice: 'Letra removida com sucesso.'
+            admin_temas_path,
+            notice: 'Tema removido com sucesso.'
           ) and return
       end
     end

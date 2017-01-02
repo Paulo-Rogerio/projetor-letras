@@ -1,32 +1,24 @@
-ActiveAdmin.register Letra do
-menu parent: "Louvores"
+ActiveAdmin.register Predio do
 
-  permit_params :nome, :cantor, :letra, :arquivo
+menu parent: "Palavras"
+  permit_params :predio
 
     index do
       selectable_column
-      column :nome
-      column :cantor
-      column :arquivo
+      column :predio
       column "Criado em", :created_at
       actions
     end
 
     show do |t|
       attributes_table do
-        row :nome
-        row :cantor
-        row :letra
-        row :arquivo
+        row :predio
       end
     end
 
     form :html => { :enctype => "multipart/form-data" } do |f|
       f.inputs do
-        f.input :nome
-        f.input :cantor
-        f.input :letra
-        f.input :arquivo
+        f.input :predio
       end
       f.actions
    end
@@ -36,8 +28,8 @@ menu parent: "Louvores"
     def create
       super do |format|
           redirect_to(
-            admin_letras_path,
-            notice: 'Letra criada com sucesso.'
+            admin_predios_path,
+            notice: 'Predio criado com sucesso.'
           ) and return
       end
     end
@@ -46,8 +38,8 @@ menu parent: "Louvores"
     def update
       super do |format|
           redirect_to(
-            admin_letras_path,
-            notice: 'Letra atualizada com sucesso.'
+            admin_predios_path,
+            notice: 'Predio atualizado com sucesso.'
           ) and return
       end
     end
@@ -56,10 +48,11 @@ menu parent: "Louvores"
     def destroy
       super do |format|
         redirect_to(
-            admin_letras_path,
-            notice: 'Letra removida com sucesso.'
+            admin_predio_path,
+            notice: 'Predio removido com sucesso.'
           ) and return
       end
     end
   end
+
 end
