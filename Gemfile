@@ -31,7 +31,6 @@ gem 'rails_12factor'
 gem 'prawn', '~> 2.1.0'
 gem 'prawnto', '~> 0.1.1'
 gem 'prawn-table', '~> 0.2.2'
-
 gem 'font-awesome-sass'
 
 

@@ -19,9 +19,9 @@
       <tr>
         <td><%= recado.interessado %></td>
         <td><%= recado.recado %></td>
-        <td><%= link_to 'Visualizar', recado%></td>
-        <td><%= link_to 'Editar', edit_recado_path(recado)%></td>
-        <td><%= link_to 'Excluir', recado, method: :delete, data: { confirm: 'Você tem certeza?' }%></td>
+        <td><%= link_to icon('eye', class: 'fa-eye'), recado%></td>
+        <td><%= link_to icon('pencil-square', class: 'fa-pencil-square'), edit_recado_path(recado) %></td>
+        <td><%= link_to icon('trash', class: 'fa-trash'), recado, method: :delete, data: { confirm: 'Você tem certeza?' } %>
       </tr>
     <% end %>
   </tbody>

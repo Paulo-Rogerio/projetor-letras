@@ -9,7 +9,7 @@
     <tr>
       <th>Nome</th>
       <th>Público</th>
-      <th colspan="3"></th>
+      <th>Play</th>
     </tr>
   </thead>
 
@@ -18,7 +18,7 @@
       <tr>
         <td><%= video.nome %></td>
         <td><%= video.publico %></td>
-        <td><%= link_to 'Visualizar', video.arquivo_url, disposition: 'inline', target: '_blank' %></td>
+        <td><%= link_to icon('youtube-play', class: 'fa-youtube-play'), video.arquivo_url, disposition: 'inline', target: '_blank' %></td>
       </tr>
     <% end %>
   </tbody>
