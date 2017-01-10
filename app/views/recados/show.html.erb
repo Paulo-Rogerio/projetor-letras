@@ -5,7 +5,7 @@
     <tr>
       <th>Interessado</th>
       <th>Recado</th>
-      <th colspan="3"></th>
+      <th colspan="3">Projetar</th>
     </tr>
   </thead>
 
@@ -13,7 +13,7 @@
       <tr>
         <td><%= @recado.interessado %></td>
         <td><%= @recado.recado %></td>
-  		<td><%= link_to 'Projetar', imprimir_recado_path(:id => @recado.id, :interessado => @recado.interessado, :recado => @recado.recado), disposition: 'inline', target: '_blank' %></td>
+  		<td><%= link_to icon('binoculars', class: 'fa-binoculars'), imprimir_recado_path(:id => @recado.id, :interessado => @recado.interessado, :recado => @recado.recado), disposition: 'inline', target: '_blank', title: "Projetar" %></td>
   </tbody>
 </table>
 

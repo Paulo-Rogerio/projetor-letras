@@ -4,7 +4,7 @@
     <tr>
       <th>Nome</th>
       <th>Cantor</th>
-      <th colspan="3"></th>
+      <th>Projetar</th>
     </tr>
   </thead>
 
@@ -13,7 +13,7 @@
       <tr>
         <td><%= letra.nome %></td>
         <td><%= letra.cantor %></td>
-        <td><%= link_to 'Visualizar', letra.arquivo_url, disposition: 'inline', target: '_blank' %></td>
+        <td><%= link_to icon('eye', class: 'fa-eye'), letra.arquivo_url, target: '_blank', title: "Visualizar" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,3 +22,4 @@
 <ul class="nav nav-pills">
   <li role="presentation" class="active"><%= link_to 'Voltar', reunioesletras_path %></li> 
 </ul>
+

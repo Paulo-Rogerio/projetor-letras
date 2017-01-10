@@ -24,7 +24,7 @@
       <tr>
         <td><%= letra.nome %></td>
         <td><%= letra.cantor %></td>
-        <td><%= link_to icon('eye', class: 'fa-eye'), letra.arquivo_url, disposition: 'inline', target: '_blank' %></td>
+        <td><%= link_to icon('eye', class: 'fa-eye'), letra.arquivo_url, disposition: 'inline', target: '_blank', title: "Visualizar" %></td>
       </tr>
     <% end %>
   </tbody>

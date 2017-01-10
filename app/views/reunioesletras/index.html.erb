@@ -19,9 +19,9 @@
       <tr>
         <td><%= reuniaoletra.nome %></td>
         <td><%= reuniaoletra.data %></td>
-        <td><%= link_to icon('eye', class: 'fa-eye'), reuniaoletra %></td>
-        <td><%= link_to icon('pencil-square', class: 'fa-pencil-square'), edit_reuniaoletra_path(reuniaoletra) %></td>
-        <td><%= link_to icon('trash', class: 'fa-trash'), reuniaoletra, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+        <td><%= link_to icon('eye', class: 'fa-eye'), reuniaoletra, title: "Visualizar" %></td>
+        <td><%= link_to icon('pencil-square', class: 'fa-pencil-square'), edit_reuniaoletra_path(reuniaoletra), title: "Editar" %></td>
+        <td><%= link_to icon('trash', class: 'fa-trash'), reuniaoletra, method: :delete, data: { confirm: 'Você tem certeza?' }, title: "Deletar" %></td>
       </tr>
     <% end %>
   </tbody>

@@ -22,7 +22,8 @@
  <div class="row">
     <div class="col-xs-3">
         <%= f.text_field :data, { type: "date"} %><br><br>
-        <%= link_to_add_association 'Adicionar Letras +', f, :letras_reunioesletras,
+        <%= f.label :Letras_de_Musicas %>
+        <%= link_to_add_association icon('plus-circle', class: 'fa-plus-circle'), f, :letras_reunioesletras, title: "Adicionar Letra",
             'data-association-insertion-node' => "#letras-reunioes ol",
             'data-association-insertion-method' => "append",
             :wrap_object => Proc.new {|lr| lr.build_letra; lr } %>
@@ -31,7 +32,7 @@
     </div>
  </div>               
      
-  <fieldset id="letras-reunioes"  style="width: 30%;">
+  <fieldset id="letras-reunioes"  style="width: 200%;">
    <ol>
       <%= f.fields_for :letras_reunioesletras do |lr| %>
          <%= render partial: "letra_reuniaoletra_fields", locals: { f: lr } %>

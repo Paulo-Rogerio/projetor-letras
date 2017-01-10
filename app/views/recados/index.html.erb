@@ -10,7 +10,7 @@
     <tr>
       <th>Interessado</th>
       <th>Recado</th>
-      <th colspan="3"></th>
+      <th colspan="3">Ações</th>
     </tr>
   </thead>
 
@@ -19,9 +19,9 @@
       <tr>
         <td><%= recado.interessado %></td>
         <td><%= recado.recado %></td>
-        <td><%= link_to icon('eye', class: 'fa-eye'), recado%></td>
-        <td><%= link_to icon('pencil-square', class: 'fa-pencil-square'), edit_recado_path(recado) %></td>
-        <td><%= link_to icon('trash', class: 'fa-trash'), recado, method: :delete, data: { confirm: 'Você tem certeza?' } %>
+        <td><%= link_to icon('eye', class: 'fa-eye'), recado, title: "Visualizar" %></td>
+        <td><%= link_to icon('pencil-square', class: 'fa-pencil-square'), edit_recado_path(recado), title: "Editar" %></td>
+        <td><%= link_to icon('trash', class: 'fa-trash'), recado, method: :delete, data: { confirm: 'Você tem certeza?' }, title: "Deletar" %>
       </tr>
     <% end %>
   </tbody>

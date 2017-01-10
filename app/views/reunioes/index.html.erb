@@ -35,7 +35,7 @@
         <td><%= reuniao.predio.predio %></td>
         <td><%= reuniao.publico %></td>
         <td><%= reuniao.tema.tema %></td>
-        <td><%= link_to icon('eye', class: 'fa-eye'), reuniao.arquivo_url, target: '_blank' %></td>
+        <td><%= link_to icon('eye', class: 'fa-eye'), reuniao.arquivo_url, target: '_blank', title: "Visualizar" %></td>
       </tr>
     <% end %>
   </tbody>
