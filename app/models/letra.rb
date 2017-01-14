@@ -4,6 +4,6 @@ class Letra < ActiveRecord::Base
 	mount_uploader :arquivo, ArquivoUploader
 
 	def nome_da_musica_e_cantor
-	    "#{nome} - #{cantor}"
+	    "#{cantor} - #{nome}"
 	end
 end
