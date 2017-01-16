@@ -15,5 +15,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   config.assets.debug = true
   config.assets.digest = true
+  config.assets.precompile += %w[active_admin.css active_admin.js]
 
 end
