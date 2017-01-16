@@ -7,7 +7,7 @@
 !/tmp/.keep
 .byebug_history
 public/uploads/
-public/assets/*
+public/assets
 .sass-cache/
 *.log
 *.pid

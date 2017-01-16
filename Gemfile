@@ -33,9 +33,10 @@ gem 'prawnto', '~> 0.1.1'
 gem 'prawn-table', '~> 0.2.2'
 gem 'font-awesome-sass'
 
+gem 'sass'
+gem 'sass-rails', '~> 5.0'
 
 gem "awesome_print", require:"ap"
-gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-datepicker-rails', '~> 1.6.1.1'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'twitter-bootstrap-rails', '~> 3.2.2'

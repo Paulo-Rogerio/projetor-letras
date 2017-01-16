@@ -421,6 +421,7 @@ DEPENDENCIES
   prawnto (~> 0.1.1)
   rails (= 4.2.4)
   rails_12factor
+  sass
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
