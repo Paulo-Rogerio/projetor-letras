@@ -35,6 +35,7 @@ gem 'font-awesome-sass'
 
 gem 'sass'
 gem 'sass-rails', '~> 5.0'
+gem 'sassc-rails'
 
 gem "awesome_print", require:"ap"
 gem 'bootstrap-datepicker-rails', '~> 1.6.1.1'
