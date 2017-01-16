@@ -2,7 +2,7 @@
 <div class="row">
 	<div class="col-xs-40">
 	 <div class="controls">
-	   <%= f.select :letra_id, Letra.all.map { |u| [u.nome_da_musica_e_cantor, u.id] }, { include_blank: true } %>
+	   <%= f.select :letra_id, Letra.order(cantor: :asc).map { |u| [u.nome_da_musica_e_cantor, u.id] }, { include_blank: true } %>
 	   <%= link_to_remove_association icon('minus-circle', class: 'fa-minus-circle'), f, title: "Remover" %>
 	 </div>
 	</div>
