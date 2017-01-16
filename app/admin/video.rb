@@ -8,7 +8,8 @@ ActiveAdmin.register Video do
   form :html => { :enctype => "multipart/form-data" } do |f|
      f.inputs 'Videos' do
        f.input :nome 
-       f.input :publico, :publico => 'Publico', :as => :select, :collection => options_for_select([['Adulto','Adulto'],['Kids','Kids']], params[:publico]), include_blank:'selecione'
+       # f.input :publico, :publico => 'Publico', :as => :select, :collection => options_for_select([['Adulto','Adulto'],['Kids','Kids']], params[:publico]), include_blank:'selecione'
+       f.input :publico, as: :select, collection: [['Adulto','adulto'],['Kids','kids']], include_blank:'selecione'
        f.input :arquivo
     end
      f.actions

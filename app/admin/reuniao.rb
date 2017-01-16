@@ -6,12 +6,14 @@ menu parent: "Palavras"
 
 	form :html => { :enctype => "multipart/form-data" } do |f|
 	     f.inputs 'Reunião' do
-	       f.input :palavra
-	       f.input :resumo
-	       f.input :publico, :publico => 'Publico', :as => :select, :collection => options_for_select([['Adulto','Adulto'],['Kids','Kids']], params[:publico]), include_blank:'selecione' 
+	       
+         f.input :palavra
+         f.input :resumo
+	       #f.input :publico, :publico => 'Publico', :as => :select, :collection => options_for_select([['Adulto','Adulto'],['Kids','Kids']], params[:publico]), include_blank:'selecione' 
+         f.input :publico, as: :select, collection: [['Adulto','adulto'],['Kids','kids']], include_blank:'selecione'
          f.input :tema_id, :label => 'Tema', :as => :select, :collection => Tema.all.map{|t| ["#{t.tema}", t.id]}, include_blank: 'selecione'
-	       f.input :preletor_id, :label => 'Preletor', :as => :select, :collection => Preletor.all.map{|n| ["#{n.nome}", n.id]}, include_blank: 'selecione'
-	       f.input :predio_id, :label => 'Predio', :as => :select, :collection => Predio.all.map{|p| ["#{p.predio}", p.id]}, include_blank: 'selecione'
+         f.input :preletor_id, :label => 'Preletor', :as => :select, :collection => Preletor.all.map{|n| ["#{n.nome}", n.id]}, include_blank: 'selecione'
+         f.input :predio_id, :label => 'Predio', :as => :select, :collection => Predio.all.map{|p| ["#{p.predio}", p.id]}, include_blank: 'selecione'
          f.input :dia_reuniao, as: :datepicker, datepicker_options: {dateFormat: 'yy/mm/dd'}
          f.input :arquivo
 	    end
